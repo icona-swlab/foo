@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Document List Interface</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F97316", // Orange
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#1F2937",
+                        "surface-light": "#F9FAFB",
+                        "surface-dark": "#374151",
+                        "text-light": "#111827",
+                        "text-dark": "#F9FAFB",
+                        "subtext-light": "#6B7280",
+                        "subtext-dark": "#9CA3AF",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#4B5563",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="flex h-screen">
+<aside class="w-24 bg-red-900 flex flex-col items-center py-4 space-y-8 text-white">
+<nav class="flex flex-col items-center space-y-8">
+<a class="flex flex-col items-center text-center text-xs hover:bg-red-800 p-2 rounded-md transition-colors" href="#">
+<span class="material-icons mb-1">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex flex-col items-center text-center text-xs hover:bg-red-800 p-2 rounded-md transition-colors" href="#">
+<span class="material-icons mb-1">menu_book</span>
+<span>Knowledge Base</span>
+</a>
+<a class="flex flex-col items-center text-center text-xs hover:bg-red-800 p-2 rounded-md transition-colors" href="#">
+<span class="material-icons mb-1">forum</span>
+<span>Conversations</span>
+</a>
+</nav>
+</aside>
+<div class="flex flex-col flex-1 h-screen">
+<header class="flex items-center justify-between p-4 border-b border-border-light dark:border-border-dark">
+<h1 class="text-2xl font-bold">Sophia Enterprise</h1>
+<div class="flex items-center space-x-2">
+<span class="material-icons">account_circle</span>
+<span>Francesco Riglietti</span>
+</div>
+</header>
+<main class="flex-grow p-6 overflow-y-auto">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<div class="flex items-center space-x-2">
+<label class="font-medium" for="settore">Settore:</label>
+<div class="flex items-center border border-border-light dark:border-border-dark rounded-md">
+<select class="bg-surface-light dark:bg-surface-dark border-none focus:ring-0 rounded-l-md" id="settore">
+<option>test</option>
+</select>
+<button class="p-2 border-l border-border-light dark:border-border-dark">
+<span class="material-icons text-subtext-light dark:text-subtext-dark">edit</span>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-4">
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-subtext-light dark:text-subtext-dark">search</span>
+<input class="pl-10 pr-4 py-2 w-full md:w-auto border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark rounded-md focus:ring-primary focus:border-primary" placeholder="Cerca file..." type="text"/>
+</div>
+<select class="border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark rounded-md focus:ring-primary focus:border-primary">
+<option>Tutte le date</option>
+</select>
+<select class="border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark rounded-md focus:ring-primary focus:border-primary">
+<option>Tutti gli stati</option>
+</select>
+<select class="border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark rounded-md focus:ring-primary focus:border-primary">
+<option>Mostra tutti</option>
+<option>Solo riservati</option>
+</select>
+</div>
+</div>
+<div class="flex border-b border-border-light dark:border-border-dark mb-6">
+<button class="py-2 px-4 text-primary border-b-2 border-primary font-semibold">PDF Testuali</button>
+<button class="py-2 px-4 text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">PDF Visuali</button>
+<button class="py-2 px-4 text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">File Video</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark">
+<div>
+<p class="font-semibold">Invoice-EBDFFF22-0029.pdf</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">31.17 KB - 06/10/2025</p>
+<div class="flex items-center mt-2">
+<span class="material-icons text-green-500 mr-1" style="font-size: 1.25rem;">check_circle</span>
+<span class="text-sm text-green-500">Processed/OK</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons">description</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark">
+<div>
+<div class="flex items-center gap-2">
+<p class="font-semibold">Invoice-B3138354-0008.pdf</p>
+<span class="flex items-center text-yellow-500 bg-yellow-100 dark:bg-yellow-900 dark:text-yellow-300 px-2 py-0.5 rounded-full text-xs">
+<span class="material-icons mr-1" style="font-size: 1rem;">lock</span>
+                                    Riservato
+                                </span>
+</div>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">41.27 KB - 06/10/2025</p>
+<div class="flex items-center mt-2">
+<span class="material-icons text-green-500 mr-1" style="font-size: 1.25rem;">check_circle</span>
+<span class="text-sm text-green-500">Processed/OK</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons">description</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark">
+<div>
+<p class="font-semibold">Invoice-EBDFFF22-0027.pdf</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">30.87 KB - 06/10/2025</p>
+<div class="flex items-center mt-2">
+<span class="material-icons text-green-500 mr-1" style="font-size: 1.25rem;">check_circle</span>
+<span class="text-sm text-green-500">Processed/OK</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons">description</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark">
+<div>
+<div class="flex items-center gap-2">
+<p class="font-semibold">Invoice-68F218A3-0004.pdf</p>
+<span class="flex items-center text-yellow-500 bg-yellow-100 dark:bg-yellow-900 dark:text-yellow-300 px-2 py-0.5 rounded-full text-xs">
+<span class="material-icons mr-1" style="font-size: 1rem;">lock</span>
+                                    Riservato
+                                </span>
+</div>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">301.74 KB - 06/10/2025</p>
+<div class="flex items-center mt-2">
+<span class="material-icons text-green-500 mr-1" style="font-size: 1.25rem;">check_circle</span>
+<span class="text-sm text-green-500">Processed/OK</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons">description</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark">
+<div>
+<p class="font-semibold">Invoice-B3138354-0006.pdf</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">41.18 KB - 06/10/2025</p>
+<div class="flex items-center mt-2">
+<span class="material-icons text-green-500 mr-1" style="font-size: 1.25rem;">check_circle</span>
+<span class="text-sm text-green-500">Processed/OK</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons">description</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full bg-primary text-white font-semibold py-3 rounded-lg flex items-center justify-center space-x-2 hover:bg-orange-600 transition-colors">
+<span class="material-icons">add_circle</span>
+<span>Aggiungi File</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
